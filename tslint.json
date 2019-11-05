@@ -1,13 +1,7 @@
 {
-  "extends": [
-    "tslint:recommended",
-    "tslint-react",
-    "tslint-config-prettier",
-    "tslint-react-hooks"
-  ],
   "rulesDirectory": ["tslint-plugin-prettier"],
+  "extends": ["tslint-config-standard", "tslint-config-prettier"],
   "rules": {
-    "prettier": true,
-    "no-console": false
+    "prettier": true
   }
 }
