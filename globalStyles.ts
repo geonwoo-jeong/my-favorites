@@ -25,17 +25,22 @@ const media = Object.keys(sizes).reduce(
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
-  html {
-      font-size: 62.5%;
-      background-color: orangered;
-  }
 
-  ${media.desktop`
-    font-size: 50%;
-  `}
+  html {
+    font-size: 62.5%;
+    background-color: ${({ theme }: any) => theme.body};
+
+    ${media.phone`
+      font-size: 56.25%;
+    `}
+
+  }
 
   body {
     box-sizing: border-box;
+    font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
+    font-weight: 400;
+    line-height: 1.7;    
   }
 
 `;
